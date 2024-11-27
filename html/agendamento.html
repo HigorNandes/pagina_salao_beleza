@@ -4,13 +4,62 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Agendamento</title>
+    <link rel="stylesheet" href="../css/agendamento.css">
+    <script src="../js/agendamento.js" defer></script>
 </head>
 <body>
-    <h1>Espaço Formosura</h1>
+    <h1 id="titulo_01">Espaço Formosura</h1>
     <nav>
         <a href="index.html">Home</a> |
         <a href="servicos.html">Serviços</a> |
         <a href="agendamento.html">Agendamento</a>
     </nav>
+    <hr>
+    <div id="formalrio">
+        <form action="../php/enviarDadosAoDB.php" method="post">
+            <label for="nome">Nome:</label>
+            <input type="text" name="nome" id="nome">
+            <br>
+            <label for="sobrenome">Sobrenome:</label>
+            <input type="text" name="sobrenome" id="sobrenome" required>
+            <br>
+            <label for="telefone">Telefone:</label>
+            <input type="text" name="telefone" id="telefone" required placeholder="(99)99999-9999">
+            <br>
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email" required placeholder="seuemail@email.com.br">
+            <br>
+            <label for="data">Agenda:</label>
+            <input type="date" name="" id="data">
+            <br>
+            <label for="horario">Horário:</label>
+            <select name="horario" id="horario"> 
+                <option value="9:00">09:00</option> 
+                <option value="9:30">09:30</option> 
+                <option value="10:00">10:00</option> 
+                <option value="10:30">10:30</option> 
+                <option value="11:00">11:00</option> 
+                <option value="11:30">11:30</option> 
+                <option value="12:00">12:00</option> 
+                <option value="12:30">12:30</option> 
+                <option value="13:00">13:00</option> 
+                <option value="13:30">13:30</option> 
+                <option value="14:00">14:00</option> 
+                <option value="14:30">14:30</option> 
+                <option value="15:00">15:00</option> 
+                <option value="15:30">15:30</option> 
+                <option value="16:00">16:00</option> 
+                <option value="16:30">16:30</option> 
+                <option value="17:00">17:00</option> 
+                <option value="17:30">17:30</option> 
+            </select>
+            <input type="submit" id="agendar" value="Agendar">
+            <input type="reset" value="Limpar">
+        </form>
+    </div>
+    <footer>
+        <hr>
+        <p id="texto-rodape">© 2024 por Espaço Formosura</p>
+    </footer>
 </body>
 </html>
